@@ -406,6 +406,7 @@ text-align: center;
     margin: 80px 0;
 }
 
+
 .contact_text .contact_items i {
     font-size: 32px;
     margin-top: 5px;
@@ -478,7 +479,17 @@ footer {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
+   .footer_section .contact_us a{
+    color: white;
+    
+}
+.footer_section .contact_us a:hover{
+    
+    text-decoration: underline;
+}
+.footer_section .contact_us a:active{
+    color: yellow;
+}
 .footer_section .follow_us i:hover {
     color: var(--secondary-color);
 }
