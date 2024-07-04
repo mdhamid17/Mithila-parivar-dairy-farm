@@ -156,21 +156,21 @@ label .close_btn {
 
 .hero_container .text_section h2 {
     font-size: 40px;
-    color: var(--secondary-color);
+    color: var(--dark-color);
     padding: 30px 0px ;
 }
 
 .hero_container .text_section h3 {
     font-size: 35px;
     font-weight: 600;
-    color: var(--white-color);
+    color: var(--dark-color);
     margin-top: 13px;
 }
 
 .hero_container .text_section p {
     font-size: 20px;
     font-weight: 400;
-    color: var(--white-color);
+    color: var(--dark-color);
     margin: 60px 0 40px;
     max-width: 70%;
 }
@@ -602,6 +602,38 @@ footer {
     .contact_container .contact_form {
         max-width: 100%;
     }
+.contact_text .contact_items p a{
+    
+    color: black;
+   
+}
+
+.contact_items .contact_details p a:hover {
+    
+    text-decoration: underline;
+   
+}
+.contact_text .contact_details p a:active {
+    
+  color: yellow;
+   
+}
+    .contact_text .contact_items p {
+    
+    text-align: center;
+   
+}
+    .footer_section .contact_us a{
+    color: white;
+    
+}
+.footer_section .contact_us a:hover{
+    
+    text-decoration: underline;
+}
+.footer_section .contact_us a:active{
+    color: yellow;
+}
 
     .footer_section {
         flex-direction: column;
