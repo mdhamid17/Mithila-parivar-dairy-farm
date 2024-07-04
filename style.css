@@ -20,7 +20,9 @@
     /* Site Max-Width */
     --site-max-width: 1300px;
 }
-
+.bx{
+    background-color: black;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -302,49 +304,6 @@ text-align: center;
 .services_items .services_text p {
     font-size: 17px;
 }
-
-/* Why Us Section */
-.why_us {
-    background: var(--light-gray-color);
-    padding: 60px 20px 120px;
-}
-
-.why_us .why_container {
-    display: flex;
-    justify-content: space-between;
-    gap: 80px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.why_container .why_items img {
-    width: 30%;
-    margin-bottom: 10px;
-}
-
-.why_container .why_items {
-    width: calc(100% / 3 - 80px);
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-}
-
-.why_items .why_us_text {
-    text-align: center;
-}
-
-.why_items .why_us_text h3 {
-    margin: 20px 0;
-    font-size: 22px;
-}
-
-.why_items .why_us_text p {
-    font-size: 17px;
-}
-
-/* Gallery Section */
 .gallery {
     background: var(--white-color);
     padding: 60px 20px 100px;
@@ -529,7 +488,7 @@ footer {
 
 @media screen and (max-width: 1024px) {
     nav {
-        padding: 15px 20px;
+        padding: 5px 20px;
     }
 
     label .menu_btn {
@@ -540,11 +499,11 @@ footer {
         display: block;
         background: var(--white-color);
         position: absolute;
-        top: 75px;
+        top: 50px;
         left: -100%;
         overflow-y: auto;
-        width: 100%;
-        height: 100vh;
+        width: 50%;
+        height: 50vh;
         text-align: center;
         transition: all 0.15s ease;
     }
@@ -565,7 +524,7 @@ footer {
         display: block;
         padding: 8px 12px;
         width: 48%;
-        margin: 24px auto;
+        margin: 10px auto;
     }
 
     nav ul li a {
@@ -662,11 +621,11 @@ footer {
 
     nav .nav_logo a img,
     .footer_section .footer_logo a img {
-        max-width: 45px;
+        max-width: 50px;
     }
 
     nav .nav_logo h2 {
-        font-size: 30px;
+        font-size: 16px;
     }
 
     .hero_container {
