@@ -406,7 +406,27 @@ text-align: center;
     margin: 80px 0;
 }
 
+.contact_text .contact_items p a{
+    
+    color: black;
+   
+}
 
+.contact_items .contact_details p a:hover {
+    
+    text-decoration: underline;
+   
+}
+.contact_text .contact_details p a:active {
+    
+  color: yellow;
+   
+}
+   .contact_text .contact_items p {
+    
+    text-align: center;
+   
+}
 .contact_text .contact_items i {
     font-size: 32px;
     margin-top: 5px;
@@ -494,7 +514,9 @@ footer {
     color: var(--secondary-color);
 }
 
-
+.footer_section .follow_us a {
+    color: white;
+}
 /* Responsive Media Query code for max-width: 1024px */
 
 @media screen and (max-width: 1024px) {
@@ -613,39 +635,6 @@ footer {
     .contact_container .contact_form {
         max-width: 100%;
     }
-.contact_text .contact_items p a{
-    
-    color: black;
-   
-}
-
-.contact_items .contact_details p a:hover {
-    
-    text-decoration: underline;
-   
-}
-.contact_text .contact_details p a:active {
-    
-  color: yellow;
-   
-}
-    .contact_text .contact_items p {
-    
-    text-align: center;
-   
-}
-    .footer_section .contact_us a{
-    color: white;
-    
-}
-.footer_section .contact_us a:hover{
-    
-    text-decoration: underline;
-}
-.footer_section .contact_us a:active{
-    color: yellow;
-}
-
     .footer_section {
         flex-direction: column;
         gap: 24px;
@@ -654,9 +643,7 @@ footer {
     .footer_section .useful_links {
         text-align: start;
     }
-.footer_section .follow_us a {
-    color: white;
-}
+
 
 
 /* Responsive Media Query code for max-width: 576px */
