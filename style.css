@@ -415,6 +415,7 @@ text-align: center;
 .contact_items .contact_details p a:hover {
     
     text-decoration: underline;
+    color:blue;
    
 }
 .contact_text .contact_details p a:active {
@@ -517,6 +518,14 @@ footer {
 .footer_section .follow_us a {
     color: white;
 }
+@media screen and (max-width: 415px) {
+    #email {
+    
+       display: none;
+         
+      }
+}
+
 /* Responsive Media Query code for max-width: 1024px */
 
 @media screen and (max-width: 1024px) {
