@@ -435,7 +435,7 @@ text-align: center;
 
 /* Footer Section */
 footer {
-    background: #1b1b1b;
+    background-color: #232F3E;
     color: var(--white-color);
     padding: 60px 20px;
 }
@@ -517,6 +517,24 @@ footer {
 
 .footer_section .follow_us a {
     color: white;
+}
+#copyright{
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    height: 8vh;
+    align-items: center;
+    padding: 10px 10px;
+
+}
+#copyright a{
+    text-decoration: none;
+    color: white;
+}
+#copyright a:hover{
+text-decoration: underline;
+color: blue;
+
 }
 @media screen and (max-width: 415px) {
    .contact_text .contact_details p a #email {
