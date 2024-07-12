@@ -236,30 +236,30 @@ text-align: center;
 .hero_container .image_section img {
     width: 100%;
 }
-.hero_container .image_section {
-    background-image: url("images/cow.jpg");
+.hero_container .image_section .imageslide{
+    background-image: url("cow.jpg");
     background-size: 100% 100%;
     box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;
     animation: changeImage 20s linear infinite;
 }
-.image_section  img{
+.image_section .imageslide img{
     visibility: hidden;
 }
 @keyframes changeImage{
     0%{
-        background-image: url(images/cow.jpg);
+        background-image: url(cow.jpg);
     }
     25%{
-        background-image: url(images/Home2.jpg);
+        background-image: url(Home2.jpg);
     }
     50%{
-        background-image: url(images/Home3.jpg);
+        background-image: url(Home3.jpg);
     }
     75%{
-        background-image: url(images/Home4.jpg);
+        background-image: url(Home4.jpg);
     }
     100%{
-        background-image: url(images/Home1.jpg);
+        background-image: url(Home1.jpg);
     }
 }
 /* About Us Section */
