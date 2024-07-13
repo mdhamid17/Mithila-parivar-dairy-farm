@@ -240,7 +240,7 @@ text-align: center;
     background-image: url("cow.jpg");
     background-size: 100% 100%;
     box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;
-    animation: changeImage 20s linear infinite;
+    animation: changeImage 40s linear infinite;
 }
 .image_section .imageslide img{
     visibility: hidden;
@@ -249,7 +249,7 @@ text-align: center;
     0%{
         background-image: url(cow.jpg);
     }
-    25%{
+    30%{
         background-image: url(Home2.jpg);
     }
     50%{
