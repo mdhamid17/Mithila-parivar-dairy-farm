@@ -247,21 +247,41 @@ text-align: center;
 
 .hero_container .image_section img {
     width: 100%;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     border:  black;
     border: 1px;
     border-style: dashed solid ;
+    box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;
+
     /* padding: 5px 10px; */
-    z-index: -4;
+    /* z-index: -4; */
 }
 .hero_container .image_section .imageslide{
     
     background-size: 100% 100%;
-    box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;
     
    
 }
-
+/* .image_section .imageslide img{
+    visibility: hidden;
+} */
+/* @keyframes changeImage{
+    0%{
+        background-image: url(cow.jpg);
+    }
+    30%{
+        background-image: url(Home2.jpg);
+    }
+    50%{
+        background-image: url(Home3.jpg);
+    }
+    75%{
+        background-image: url(Home4.jpg);
+    }
+    100%{
+        background-image: url(Home1.jpg);
+    }
+} */
 /* About Us Section */
 .about_us {
     padding: 60px 20px 120px;
