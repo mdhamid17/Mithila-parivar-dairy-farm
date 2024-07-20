@@ -1,831 +1,371 @@
-/* Importing Google font - Poppins */
+<!DOCTYPE html>
 
-@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css");
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-/* Defining Custome Variables */
-:root {
-    /* Colors */
-    --primary-color: #47eb07;
-    --secondary-color: #f3961c;
-    --dark-color: #252525;
-    --white-color: #fff;
-    --light-gray-color: #f2f2f2;
-
-    /* Site Max-Width */
-    --site-max-width: 1300px;
-}
-.auto-type{
-    font-size:xx-large;
-}
-.bx-menu::before{
-    background-color: black;
-    content: "\eb5f";
-}
-.bx-x::before{
-    content:"\ec8d";
-    background-color: black;
-}
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--white-color);
-}
-
-/* Setting for the whole website */
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-.section_container {
-    margin: 0 auto;
-    max-width: var(--site-max-width);
-}
-
-.section_title {
-    text-align: center;
-    padding: 20px 0 30px;
-    font-size: 32px;
-    font-family: "Righteous", sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.section_title::after {
-    content: '';
-    width: 80px;
-    background: var(--secondary-color);
-    height: 5px;
-    display: block;
-    margin: 7px auto 0;
-    border-radius: 8px;
-}
-
-/* Styling for the header section */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    background: var(--white-color);
-}
-
-nav {
-    display: flex;
-    padding: 15px 0 5px 25px;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    max-width: var(--site-max-width);
-}
-
-.services .button:hover{
-    background-color:yellow;
-}
-.services .button:active{
-    background-color: red;
-}
-nav .nav_logo a {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-nav .nav_logo a img {
-    max-width: 55px;
-}
-
-nav .nav_logo h2 {
-    color: var(--dark-color);
-    font-weight: 600;
-    font-size: 32px;
-}
-
-nav ul {
-    display: flex;
-    gap: 10px;
-}
-
-nav ul li a {
-    display: block;
-    padding: 10px 25px;
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--dark-color);
-    border-radius: 30px;
-    transition: all 0.2s ease;
-}
-
-nav ul li a:hover {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-}
-
-nav label {
-    font-size: 32px;
-    color: var(--white-color);
-    cursor: pointer;
-}
-
-label .menu_btn,
-label .close_btn {
-    display: none;
-}
-
-#click {
-    display: none;
-}
-
-/* Hero Section */
-
-.hero_section {
-    min-height: 100vh;
-    background: var(--primary-color);
-}
-
-.hero_container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    align-items: center;
-    padding-top: 85px;
-    min-height: calc(100vh - 85px);
-    justify-content: space-between;
-
-}
-
-.hero_container .text_section h2 {
-    font-size: 30px;
-    color: var(--dark-color);
-    padding: 30px 0px ;
-    font-weight: bold;
-}
-
-.hero_container .text_section h3 {
-    font-size: 30px;
-    font-weight: 600;
-    color: var(--dark-color);
-    margin-top: 13px;
-}
-
-.hero_container .text_section p {
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--dark-color);
-    margin: 60px 0 40px;
-    max-width: 70%;
-}
-.services .services_text{
-text-align: center;
-}
-.services .button {
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mithila Parivar Dairy farm</title>
     
-    gap: 24px;
-    background-color: #47eb07;
+    <!-- Box Icon Link for Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header & Navbar Section -->
+    <header>
+      <nav>
+        <div class="nav_logo" >
+          <a href="#">
+            <img src="logo.png" alt="Logo" />
+            <h2>Mithila Parivar Dairy Farm</h2>
+          </a>
+        </div>
+
+        <input type="checkbox" id="click" />
+        <label for="click">
+          <i class="menu_btn bx bx-menu"></i>
+          <i class="close_btn bx bx-x"></i>
+        </label>
+
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero_section">
+      <div class="section_container">
+        <div class="hero_container">
+          <div class="text_section">
+<!--             <h2>Fresh From Our Farm</h2> -->
+             <h2><span class="auto-type"></span></h2>
+            <h3>Discover the Magic in Every Products</h3> 
+            <p>
+              Welcome to Mithila Parivar Dairy Farm, where pure goodness flows fresh from our dairy to your table. our family-owned farm prides itself on delivering the highest quality raw milk and dairy products straight from our contented cows.
+            </p>
+
+           
+          </div>
+
+          <div class="image_section">
+            <div class="imageslide" >
+
+              <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/Home1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/Home2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/Home3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about_us" id="about">
+      <div class="section_container">
+        <div class="about_container">
+          <div class="text_section">
+            <h2 class="section_title">About Us</h2>
+            <p>
+              Mithila Parivar Dairy Farm stands as a steward of sustainability.located in Genaur,Madhubani,Bihar.We prioritize eco-friendly practices that minimize our environmental footprint and ensure the long-term health of our land. By embracing responsible farming methods.we strive to preserve our heritage while contributing positively to the local community and beyond.
+            </p>
+          </div>
+
+          <div class="image_section">
+            <img src="milk.jpg" alt="milk" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="service">
+      <h2 class="section_title">Our Services</h2>
+      <div class="section_container">
+        <div class="service_container">
+          <div class="services_items">
+            <img src="gallery4.png" alt="Milk" />
+            <div class="services_text">
+              <h3>Pure Non Homogenous Cow Milk</h3>
+              <p>
+                Price: 60 Rs/Liter<br>
+               
+               <a href="https://wa.me/qr/G7I42NJS6XSQB1">
+                <div class="hero_section_button">
+                  <button class="button">Order Online</button>
+                
+                </div>
+               </a>
+              </p>
+            </div>
+          </div>
+          <div class="services_items">
+            <img src="gallery2.png" alt="Curd" />
+            <div class="services_text">
+              <h3>Fresh Cow Curd</h3>
+              <p>
+               Price:120 Rs/Kg
+               <a href="https://wa.me/qr/G7I42NJS6XSQB1">
+                <div class="hero_section_button">
+                  <button class="button">Order Online</button>
+                
+                </div>
+               </a>
+              </p>
+            </div>
+          </div>
+          <div class="services_items">
+            <img src="gallery3.jpg" alt="Ghee" />
+            <div class="services_text">
+              <h3>pure Ghee</h3>
+              <p>Price:1400 Rs/Kg</p>
+              <a href="https://wa.me/qr/G7I42NJS6XSQB1">                
+                <div class="hero_section_button">
+                <button class="button">Order Online</button>
+              
+              </div></a>         
+            </div>
+          </div>
+          <div class="services_items">
+            <img src="gallery1.png" alt="Butter" />
+            <div class="services_text">
+              <h3>Butter</h3>
+              <p>
+                Coming Soon!!
+              </p>
+            </div>
+          </div>
+          <div class="services_items">
+            <img 
+              src="lassi1.png"
+              alt="Lassi"
+            />
+            <div class="services_text">
+              <h3>Pure Lassi</h3>
+              <p>Coming Soon!!</p>
+            </div>
+          </div>
+          <div class="services_items">
+            <img src="lassi.png" alt="Desserts" />
+            <div class="services_text">
+              <h3>Pure Chach</h3>
+              <p>
+                Coming Soon!!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+      <h2 class="section_title">Gallery</h2>
+      <div class="section_container">
+        <div class="gallery_container">
+          <div class="gallery_items">
+            <img src="gallery1.png" alt="Gallery Image" />
+          </div>
+          <div class="gallery_items">
+            <img src="gallery2.png" alt="Gallery Image" />
+          </div>
+          <div class="gallery_items">
+            <img src="gallery3.jpg" alt="Gallery Image" />
+          </div>
+          <div class="gallery_items">
+            <img src="milk-background.jpg" alt="Gallery Image" />
+          </div>
+          <div class="gallery_items">
+            <img src="gallery_5.jpg" alt="Gallery Image" />
+          </div>
+          <div class="gallery_items">
+            <img src="gallery4.png" alt="Gallery Image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2 class="section_title">Contact Us</h2>
+      <div class="section_container">
+        <div class="contact_container">
+          <div class="contact_form">
+            <form action="#">
+              <div class="field">
+                <label for="Name">Full Name</label>
+                <input type="text" id="Name" placeholder="Your Name" required />
+              </div>
+              <div class="field">
+                <label for="email">Your Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="number">Your Number</label>
+                <input
+                  type="number"
+                  id="number"
+                  placeholder="Your Contact Number"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="textarea">Textarea</label>
+                <textarea
+                  name="textarea"
+                  id="textarea"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+
+              <button class="button" id="submit">Submit</button>
+            </form>
+          </div>
+
+          <div class="contact_text">
+            <div class="contact_items">
+              <i class="bx bx-current-location"></i>
+              <div class="contact_details">
+                <h3>Our Location</h3>
+                <p><a href="https://g.co/kgs/gLLfjwY"><span class="material-symbols-outlined">
+                  my_location
+                  </span> Genaur,Madhubani,Bihar,India<br>Pin Code:847223</a></p>
+              </div>
+            </div>
+            <div class="contact_items">
+              <i class="bx bxs-envelope"></i>
+              <div class="contact_details">
+                <h3>General Enquries</h3>
+                <p><a href="mailto:mithilaparivardairyfarm@gmail.com"><span class="material-symbols-outlined" id="email">
+                  mail
+                  </span> mithilaparivardairyfarm@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="contact_items">
+              <i class="bx bxs-phone-call"></i>
+              <div class="contact_details">
+                <h3>Call Us</h3>
+                <p><a href="tel:+918298867478"><span class="material-symbols-outlined">
+                  call
+                  </span> +91 8298867478</a></p>
+              </div>
+            </div>
+            <div class="contact_items">
+              <i class="bx bxl-whatsapp"></i>
+              <div class="contact_details">
+                <h3>WhatsApp</h3>
+                <p><a href="https://wa.me/qr/DDCWK4HRDPASC1"><span class="material-symbols-outlined">
+                  chat
+                  </span> +91 8298867478</a></p>
+              </div>
+            </div>
+            <div class="contact_items">
+              <i class="bx bxs-time-five"></i>
+              <div class="contact_details">
+                <h3>Our Timing</h3>
+                <p>Mon-Sun : 05:30 AM - 10:30 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="section_container">
+        <div class="footer_section">
+          <div class="footer_logo">
+            <a href="index.html">
+              <img src="logo.png" alt="Logo" />
+              <h2>Dairy Farm</h2>
+            </a>
+          </div>
+
+          <div class="useful_links">
+            <h3>Useful Links</h3>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#service">Services</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="contact_us">
+            <h3>Contact</h3>
+            <ul>
+              <li>
+               <a href="https://g.co/kgs/gLLfjwY"  class="add"> <i class="bx bx-current-location "></i>
+                <span>Genaur,Madhubani,Bihar,India<br>Pin Code:847223</span></a>
+              </li>
+              <li>
+                 <a href="tel:+918298867478"><i class="bx bxs-phone-call"></i> <span>+91 8298867478</span></a>
+              </li>
+              <li>
+                <i class="bx bxs-time-five"></i>
+                <span>Mon-Sun : 05:30 AM - 10:30 PM</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="follow_us">
+            <h3>Follow</h3>
+             <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+     <div id="copyright">© Copyright 2024 Mithila Parivar Dairy Farm. All rights reserved | Developed By : <a href="https://github.com/mdhamid17?tab=repositories">Md Hamid</a></div>
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
     
-    height: 15%;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: 400;
-    margin: 10px;
-    padding:10px;
+      var typed=new Typed(".auto-type",{
+        strings:["Welcome To Mithila Parivar Dairy Farm","Fresh From Our Farm"],
+        typeSpeed:100,
+        backSpeed: 50,
+        looped:true
 
-   
-}
-/* .button {
-    display: flex;
-    gap: 24px;
-    background-color: #47eb07;
-} */
-
-.hero_container .hero_section_button .button {
-    padding: 8px 28px;
-    border: 2px solid transparent;
-    outline: none;
-    cursor: pointer;
-    border-radius: 50px;
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    font-size: 18px;
-    font-weight: 600;
-    transition: all 0.4s ease;
-}
-
-.hero_container .hero_section_button .button:last-child {
-    color: var(--white-color);
-    border-color: var(--white-color);
-    background: none;
-}
-
-.hero_container .hero_section_button .button:first-child:hover {
-    color: var(--white-color);
-    background: transparent;
-    border-color: var(--white-color);
-}
-
-.hero_container .hero_section_button .button:last-child:hover {
-    color: var(--primary-color);
-    background: var(--secondary-color);
-    border-color: var(--secondary-color);
-}
-
-.hero_container .image_section {
+      })
     
-    max-width: 45%;
-}
-
-.hero_container .image_section img {
-    width: 100%;
-    border-radius: 5px;
-    border:  black;
-    border: 1px;
-    border-style: dashed solid ;
-    /* padding: 5px 10px; */
-    z-index: -4;
-}
-.hero_container .image_section .imageslide{
-    
-    background-size: 100% 100%;
-    box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;
-    
-   
-}
-/* .image_section .imageslide img{
-    visibility: hidden;
-} */
-/* @keyframes changeImage{
-    0%{
-        background-image: url(cow.jpg);
-    }
-    30%{
-        background-image: url(Home2.jpg);
-    }
-    50%{
-        background-image: url(Home3.jpg);
-    }
-    75%{
-        background-image: url(Home4.jpg);
-    }
-    100%{
-        background-image: url(Home1.jpg);
-    }
-} */
-/* About Us Section */
-.about_us {
-    padding: 60px 20px 120px;
-    background: var(--light-gray-color);
-}
-
-.about_container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center;
-}
-
-.about_container .text_section {
-    max-width: 50%;
-}
-
-.about_container .text_section p {
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    line-height: 30px;
-    text-align: center;
-}
-
-.about_container .image_section {
-    max-width: 45%;
-}
-
-.about_container .image_section img {
-    width: 100%;
-}
-
-/* Services Section */
-.services {
-    background: var(--dark-color);
-    color: var(--white-color);
-    padding: 60px 20px 120px;
-}
-
-.services .service_container {
-    display: flex;
-    justify-content: space-between;
-    gap: 120px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.section_container .services_items img {
-    width: 100%;
-}
-
-.section_container .services_items {
-    width: calc(100% / 3 - 120px);
-}
-
-
-
-.services_items .services_text h3 {
-    margin: 12px 0;
-    font-weight: 600;
-    font-size: 24px;
-}
-
-.services_items .services_text p {
-    font-size: 17px;
-}
-.gallery {
-    background: var(--white-color);
-    padding: 60px 20px 100px;
-}
-
-.gallery .gallery_container {
-    display: flex;
-    justify-content: space-between;
-    gap: 32px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.gallery_container .gallery_items {
-    width: calc(100% / 3 - 32px);
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.gallery .gallery_container img {
-    width: 100%;
-    border-radius: 8px;
-    transition: transform 0.4s ease;
-}
-
-.gallery_container .gallery_items:hover img {
-    transform: scale(1.3);
-}
-
-/* Contact Section */
-.contact {
-    background: var(--light-gray-color);
-    padding: 60px 20px 100px;
-}
-
-.contact_container {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.contact_container .contact_form {
-    max-width: 65%;
-    width: 100%;
-}
-
-.contact_container .contact_form .field {
-    margin: 20px 0;
-}
-
-.contact_container .contact_form .field label {
-    display: block;
-    font-size: 17px;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-
-.contact_container .contact_form .field input {
-    width: 100%;
-    height: 50px;
-    padding: 0 12px;
-    font-size: 16px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-.contact_container .contact_form textarea {
-    width: 100%;
-    height: 200px;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    resize: vertical;
-}
-
-.contact_container .contact_form .button {
-    padding: 8px 28px;
-    border: 2px solid transparent;
-    outline: none;
-    cursor: pointer;
-    border-radius: 50px;
-    background: var(--primary-color);
-    color: var(--white-color);
-    font-size: 17px;
-    font-weight: 600;
-    transition: all 0.4s ease;
-}
-
-.contact_container .contact_form .button:hover {
-    color: var(--primary-color);
-    background: transparent;
-    border-color: var(--primary-color);
-}
-
-.contact_text .contact_items {
-    display: flex;
-    gap: 20px;
-    margin: 60px 0;
-}
-
-.contact_text .contact_items p a{
-    
-    color: black;
-   
-}
-
-.contact_items .contact_details p a:hover {
-    
-    text-decoration: underline;
-    color:blue;
-   
-}
-.contact_text .contact_details p a:active {
-    
-  color: yellow;
-   
-}
-   .contact_text .contact_items p {
-    
-    text-align: center;
-   
-}
-
-.contact_text .contact_items .contact_details h3 {
- 
- font-weight: bold;
- font-size:18.72px ;
-
-}
-.contact_text .contact_items i {
-    font-size: 32px;
-    margin-top: 5px;
-}
-
-/* Footer Section */
-footer {
-    background-color: #232F3E;
-    color: var(--white-color);
-    padding: 60px 20px;
-}
-
-.footer_section {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer_section h3 {
-    font-size: 22px;
-    margin-bottom: 16px;
-    font-weight: 600;
-}
-
-.footer_section .footer_logo a {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    color: var(--white-color);
-}
-
-.footer_section .footer_logo a img {
-    max-width: 55px;
-}
-
-.footer_section .footer_logo a h2 {
-    font-weight: 600;
-}
-
-.footer_section .useful_links ul li {
-    margin: 20px 0;
-}
-
-.footer_section .useful_links ul li a {
-    color: var(--white-color);
-    font-size: 17px;
-}
-
-.footer_section .useful_links ul li a:hover {
-    text-decoration: underline;
-}
-
-.footer_section .contact_us ul li {
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    
-
-    
-}
-.footer_section .contact_us ul li .add{
-    text-align: center;
-}
-
-.footer_section .contact_us ul li i {
-    font-size: 25px;
-}
-
-.footer_section .contact_us ul li span {
-    font-size: 17px;
-    
-
-}
-
-.footer_section .follow_us i {
-    font-size: 26px;
-    margin-right: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-   .footer_section .contact_us a{
-    color: white;
-    
-}
-.footer_section .contact_us a:hover{
-    
-    text-decoration: underline;
-}
-.footer_section .contact_us a:active{
-    color: yellow;
-}
-.footer_section .follow_us i:hover {
-    color: var(--secondary-color);
-}
-
-.footer_section .follow_us a {
-    color: white;
-}
-#copyright{
-    background-color: var(--dark-color);
-    color: white;
-    text-align: center;
-    height: 8vh;
-    align-items: center;
-    padding: 10px 10px;
-
-}
-#copyright a{
-    text-decoration: none;
-    color: white;
-}
-#copyright a:hover{
-text-decoration: underline;
-color: blue;
-
-}
-@media screen and (max-width: 415px) {
-   .contact_text .contact_details p a #email {
-    
-       display: none;
-         
-      }
-}
-
-/* Responsive Media Query code for max-width: 1024px */
-
-@media screen and (max-width: 1024px) {
-    nav {
-        padding: 10px 20px;
-    }
-
-    label .menu_btn {
-        display: block;
-    }
-
-    nav ul {
-        display: block;
-        background: var(--white-color);
-        position: absolute;
-        top: 50px;
-        left: -100%;
-        overflow-y: auto;
-        width: 50%;
-        height: 50vh;
-        text-align: center;
-        transition: all 0.15s ease;
-    }
-
-    #click:checked~ul{
-        left: 0;
-        
-    }
-
-    #click:checked~label .close_btn {
-        display: block;
-    }
-
-    #click:checked~label .menu_btn {
-        display: none;
-    }
-
-    nav ul li {
-        display: block;
-        /* padding: 8px 12px; */
-        width: 48%;
-        margin: 10px;
-    }
-
-    nav ul li a {
-        color: var(--dark-color);
-    }
-    nav ul li a:hover {
-        color: var(--primary-color);
-        background-color:#FFFFFF;
-
-        
-        
-    }
-   
-
-    .hero_container {
-        flex-direction: column-reverse;
-        align-items: center;
-        padding-bottom: 32px;
-    }
-
-    .hero_container .image_section {
-        max-width: 100%;
-        text-align: center;
-    }
-    
-    .hero_container .image_section img {
-        max-width: 100%;
-        align-items: center;
-        
-        /* border: 2px solid black; */
-    }
-    .hero_container .image_section .imageslide{
-
-        padding: 5px 10px;
-    }
-    .hero_container .text_section h2 {
-        font-size: 30px;
-        font-weight:bold;
-    }
-
-    .hero_container .text_section {
-        max-width: 100%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero_container .text_section p {
-        max-width: 100%;
-    }
-
-    .about_container {
-        flex-direction: column;
-    }
-
-    .about_container .text_section {
-        max-width: 100%;
-    }
-
-    .services .service_container {
-        gap: 50px;
-    }
-
-    .section_container .services_items {
-        width: calc(100% / 2 - 50px);
-    }
-
-    .why_us .why_container {
-        gap: 50px;
-    }
-
-    .why_container .why_items {
-        width: calc(100% / 2 - 50px);
-    }
-
-    .gallery .gallery_container {
-        justify-content: center;
-    }
-
-    .gallery_container .gallery_items {
-        width: calc(100% / 2 - 50px);
-    }
-
-    .contact_container {
-        flex-direction: column-reverse;
-    }
-
-    .contact_text .contact_items {
-        margin: 25px 0;
-    }
-
-    .contact_container .contact_form {
-        max-width: 100%;
-    }
-    .footer_section {
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    .footer_section .useful_links {
-        text-align: start;
-    }
-
-
-}
-/* Responsive Media Query code for max-width: 576px */
-@media screen and (max-width: 576px) {
-    .section_title {
-        padding: 50px 0;
-    }
-
-    nav .nav_logo a img,
-    .footer_section .footer_logo a img {
-        max-width: 50px;
-    }
-    nav ul li a:hover {
-        color: var(--primary-color);
-        background-color: var(--light-gray-color);
-        
-    }
-    nav .nav_logo h2 {
-        font-size: 16px;
-    }
-
-    .hero_container {
-        justify-content: space-evenly;
-    }
-
-    .hero_container .text_section h2 {
-        font-size: 30px;
-        font-weight:bold;
-    }
-
-    .hero_container .text_section h3 {
-        font-size: 26px;
-    }
-
-    .hero_container .image_section img {
-        max-width: 100%;
-        
-    }
-    .hero_container .image_section .imageslide{
-
-        padding: 5px 10px;
-    }
-    .hero_container .text_section p {
-        font-size: 17px;
-    }
-
-    .about_container .image_section {
-        max-width: 70%;
-    }
-
-    .button {
-        padding: 10px 20px !important;
-        font-size: 15px !important;
-    }
-
-    .section_container .services_items,
-    .why_container .why_items {
-        width: 100%;
-        text-align: center;
-    }
-
-    .gallery_container .gallery_items {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .services .service_container,
-    .why_us .why_container {
-        gap: 70px;
-    }
-
-    .section_container .services_items img {
-        max-width: 80%;
-    }
-}
-
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
