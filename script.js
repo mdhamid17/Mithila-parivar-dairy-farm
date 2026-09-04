@@ -1,0 +1,11 @@
+const header=document.querySelector('.header'),menu=document.querySelector('.menu'),links=document.querySelector('.navlinks');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>15));
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',open);menu.setAttribute('aria-label',open?'Close navigation':'Open navigation')});
+const closeMenu=()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation')};
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+document.addEventListener('click',event=>{if(links.classList.contains('open')&&!links.contains(event.target)&&!menu.contains(event.target))closeMenu()});
+document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const dialog=document.querySelector('#lightbox'),dialogImg=dialog.querySelector('img');document.querySelectorAll('.gallery-grid button').forEach(b=>b.addEventListener('click',()=>{dialogImg.src=b.querySelector('img').src;dialogImg.alt=b.querySelector('img').alt;dialog.showModal()}));dialog.querySelector('button').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+document.querySelector('#enquiryForm').addEventListener('submit',e=>{e.preventDefault();const name=document.querySelector('#name').value.trim(),phone=document.querySelector('#phone').value.trim(),interest=document.querySelector('#interest').value,message=document.querySelector('#message').value.trim();const text=`Hello Mithila Parivar Dairy Farm,%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AInterested in: ${encodeURIComponent(interest)}%0AMessage: ${encodeURIComponent(message||'Please share availability and delivery details.')}`;open(`https://wa.me/918298867478?text=${text}`,'_blank','noopener')});document.querySelector('#year').textContent=new Date().getFullYear();
+
